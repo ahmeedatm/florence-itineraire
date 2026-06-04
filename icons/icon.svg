@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#fdfaf4"/>
+
+  <!-- Dome (Brunelleschi silhouette) -->
+  <g fill="#a8513a">
+    <!-- Drum (octagonal base) -->
+    <rect x="166" y="296" width="180" height="40" rx="2"/>
+
+    <!-- Dome curve -->
+    <path d="M 166 296
+             C 166 196, 226 138, 256 138
+             C 286 138, 346 196, 346 296
+             Z"/>
+
+    <!-- Lantern base -->
+    <rect x="240" y="100" width="32" height="42"/>
+
+    <!-- Lantern top (small dome) -->
+    <path d="M 232 100
+             C 232 78, 248 64, 256 64
+             C 264 64, 280 78, 280 100
+             Z"/>
+
+    <!-- Small finial sphere on top -->
+    <circle cx="256" cy="52" r="10"/>
+
+    <!-- Drum verticals (ribs) -->
+    <rect x="206" y="200" width="4" height="100" opacity="0.4"/>
+    <rect x="254" y="184" width="4" height="116" opacity="0.4"/>
+    <rect x="302" y="200" width="4" height="100" opacity="0.4"/>
+  </g>
+
+  <!-- Wordmark below -->
+  <text x="256" y="408" font-family="Georgia, serif" font-style="italic"
+        font-weight="500" font-size="56" fill="#a8513a"
+        text-anchor="middle" letter-spacing="2">Firenze</text>
+
+  <!-- Date ribbon -->
+  <text x="256" y="448" font-family="Helvetica, sans-serif"
+        font-size="20" fill="#8a8175"
+        text-anchor="middle" letter-spacing="6">2026</text>
+</svg>

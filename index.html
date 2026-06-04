@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Florence · Carnet de voyage · 7-12 juin 2026</title>
+
+<!-- PWA -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#a8513a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Firenze 2026">
+<link rel="apple-touch-icon" href="./icons/icon-180.png">
+<link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
+
+<link rel="stylesheet" href="./fonts/fonts.css">
+<style>
+:root {
+  --bg: #f7f3ec;
+  --paper: #fdfaf4;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #8a8175;
+  --rule: #d9d2c4;
+  --rule-strong: #b8ae9a;
+  --accent: #a8513a;
+  --accent-soft: #c97a5d;
+  --highlight: #f0e8d8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding-bottom: 100px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+/* ============ HEADER ============ */
+header {
+  padding: 80px 28px 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 22px;
+}
+header h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+header .dates {
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+header .flourish {
+  text-align: center;
+  color: var(--accent);
+  font-size: 22px;
+  letter-spacing: 14px;
+  margin: 28px 0 0;
+}
+
+/* ============ NAV ============ */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 243, 236, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 16px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  z-index: 50;
+  scrollbar-width: none;
+}
+nav::-webkit-scrollbar { display: none; }
+nav a {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+nav a:hover, nav a:active { color: var(--accent); }
+
+main { max-width: 660px; margin: 0 auto; padding: 0 28px; }
+
+/* ============ FLIGHT CARD ============ */
+.flights {
+  margin: 60px 0 40px;
+  padding: 32px 28px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.flights-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 22px;
+}
+.flight-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+}
+.flight-row:first-of-type { border-top: none; padding-top: 0; }
+.flight-row:last-of-type { padding-bottom: 0; }
+.flight-leg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.flight-leg .arrow { color: var(--accent); margin: 0 6px; }
+.flight-meta {
+  font-size: 11px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+}
+.flight-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ============ SOMMAIRE ============ */
+.toc {
+  margin: 50px 0;
+}
+.section-marker {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 40px 0 30px;
+  font-weight: 500;
+}
+.section-marker::before, .section-marker::after {
+  content: '—';
+  margin: 0 14px;
+  color: var(--rule-strong);
+}
+.toc-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s;
+}
+.toc-row:last-child { border-bottom: 1px solid var(--rule); }
+.toc-row:hover { background: var(--paper); }
+.toc-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent);
+}
+.toc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.toc-title small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.toc-date {
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ============ ARTICLE / JOUR ============ */
+article {
+  margin: 70px 0;
+  scroll-margin-top: 60px;
+}
+.day-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+article h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+}
+article h2 em { font-style: italic; color: var(--accent); }
+.date-line {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro-para {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+}
+
+.moment {
+  margin-bottom: 32px;
+}
+.moment-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--accent);
+  margin-bottom: 3px;
+  letter-spacing: 0.3px;
+}
+.moment-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.moment-body {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.moment-body a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  font-weight: 500;
+}
+.moment-body em { color: var(--ink); font-weight: 500; }
+.moment-body strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.pullquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--accent);
+  padding: 30px 0 30px 24px;
+  border-left: 2px solid var(--accent);
+  margin: 36px 0;
+}
+
+.dingbat {
+  text-align: center;
+  font-size: 16px;
+  color: var(--rule-strong);
+  letter-spacing: 14px;
+  margin: 44px 0;
+}
+
+.note {
+  background: var(--paper);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  margin: 28px 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.note strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.warning {
+  background: #fdf6e7;
+  border: 1px solid #e8d4a0;
+  padding: 16px 20px;
+  margin: 28px 0;
+  font-size: 14px;
+  color: #6b4d0f;
+  line-height: 1.6;
+}
+.warning strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8a5a00;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.day-footer {
+  margin-top: 44px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-family: 'Inter', sans-serif;
+}
+.day-footer .accent {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+
+/* ============ PRATIQUE ============ */
+.practical {
+  background: var(--paper);
+  padding: 50px 32px;
+  margin: 60px -28px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.practical h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 34px;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+.practical h2 em { font-style: italic; color: var(--accent); }
+.practical-sub {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 40px;
+}
+.practical-block {
+  margin-bottom: 36px;
+}
+.practical-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.practical-block p, .practical-block ul {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.practical-block ul {
+  list-style: none;
+  padding: 0;
+}
+.practical-block li {
+  padding: 6px 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.practical-block li:first-child { border-top: none; }
+.practical-block li em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ============ BUDGET ============ */
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.budget-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+.budget-table td:last-child {
+  text-align: right;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.budget-table tr.total td {
+  border-bottom: none;
+  padding-top: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 600;
+  border-top: 2px solid var(--accent);
+}
+.budget-table tr.total td:last-child {
+  font-size: 22px;
+}
+
+/* ============ CHECKLIST ============ */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+.checklist li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  position: relative;
+  padding-left: 28px;
+  line-height: 1.5;
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--ink-muted);
+  border-radius: 2px;
+}
+
+/* ============ FOOTER ============ */
+.book-footer {
+  text-align: center;
+  padding: 60px 28px 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-muted);
+  letter-spacing: 0.5px;
+}
+.book-footer .colophon {
+  margin-top: 14px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 540px) {
+  header { padding: 56px 24px 44px; }
+  header h1 { font-size: 46px; }
+  main { padding: 0 24px; }
+  article { margin: 50px 0; }
+  article h2 { font-size: 32px; }
+  .intro-para { font-size: 18px; }
+  .moment-title { font-size: 19px; }
+  .pullquote { font-size: 20px; padding: 22px 0 22px 18px; }
+  .flights { padding: 26px 20px; margin: 40px 0 30px; }
+  .flight-row { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
+  .flight-meta { text-align: left; }
+  .flight-leg { font-size: 16px; }
+  .practical { padding: 40px 24px; margin: 50px -24px 0; }
+  .practical h2 { font-size: 28px; }
+  .toc-row { grid-template-columns: 28px 1fr auto; gap: 12px; }
+  .toc-title { font-size: 17px; }
+  .day-footer { flex-direction: column; gap: 8px; align-items: flex-start; }
+}
+
+/* ============ INTERACTIVE ============ */
+.checklist li { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; transition: opacity 0.15s; }
+.checklist li:hover::before, .checklist li:active::before { border-color: var(--accent); }
+.checklist li.checked { opacity: 0.45; text-decoration: line-through; text-decoration-color: var(--ink-muted); text-decoration-thickness: 1px; }
+.checklist li.checked::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.checklist li.checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 19px;
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid var(--paper);
+  border-bottom: 2px solid var(--paper);
+  transform: rotate(-45deg);
+}
+
+.toc-row.today {
+  background: var(--highlight);
+  position: relative;
+}
+.toc-row.today::before {
+  content: 'Aujourd\'hui';
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--accent);
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+article.today h2 { position: relative; }
+article.today h2::after {
+  content: '— aujourd\'hui';
+  display: block;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* iOS safe areas (notch / home indicator) */
+body { padding-top: env(safe-area-inset-top); padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Carnet de voyage · Toscane 2026</div>
+  <h1>Florence<br><em>en famille</em></h1>
+  <div class="dates">7 — 12 juin</div>
+  <div class="flourish">· · ·</div>
+</header>
+
+<nav>
+  <a href="#sommaire">Sommaire</a>
+  <a href="#jour1">I.</a>
+  <a href="#jour2">II.</a>
+  <a href="#jour3">III.</a>
+  <a href="#jour4">IV.</a>
+  <a href="#jour5">V.</a>
+  <a href="#jour6">VI.</a>
+  <a href="#pratique">Pratique</a>
+  <a href="#budget">Budget</a>
+  <a href="#avant">À faire</a>
+</nav>
+
+<main>
+
+  <!-- ============ VOLS ============ -->
+  <div class="flights">
+    <div class="flights-title">Les vols</div>
+    <div class="flight-row">
+      <div class="flight-date">Dim 7 juin</div>
+      <div class="flight-leg">CDG <span class="arrow">→</span> FLR</div>
+      <div class="flight-meta">AF1466 · 10h20 → 12h10</div>
+    </div>
+    <div class="flight-row">
+      <div class="flight-date">Ven 12 juin</div>
+      <div class="flight-leg">FLR <span class="arrow">→</span> CDG</div>
+      <div class="flight-meta">AF1667 · 18h10 → 20h00</div>
+    </div>
+  </div>
+
+  <!-- ============ SOMMAIRE ============ -->
+  <section id="sommaire" class="toc">
+    <div class="section-marker">Sommaire</div>
+    <a class="toc-row" href="#jour1">
+      <span class="toc-num">I.</span>
+      <span class="toc-title">Arrivée &amp; premiers pas<small>Florence centre</small></span>
+      <span class="toc-date">Dim 7</span>
+    </a>
+    <a class="toc-row" href="#jour2">
+      <span class="toc-num">II.</span>
+      <span class="toc-title">Le cœur de Florence<small>Duomo · Uffizi · Mercato</small></span>
+      <span class="toc-date">Lun 8</span>
+    </a>
+    <a class="toc-row" href="#jour3">
+      <span class="toc-num">III.</span>
+      <span class="toc-title">Pise &amp; Lucca<small>La promesse à Maman</small></span>
+      <span class="toc-date">Mar 9</span>
+    </a>
+    <a class="toc-row" href="#jour4">
+      <span class="toc-num">IV.</span>
+      <span class="toc-title">Sienne &amp; San Gimignano<small>La Toscane des cartes postales</small></span>
+      <span class="toc-date">Mer 10</span>
+    </a>
+    <a class="toc-row" href="#jour5">
+      <span class="toc-num">V.</span>
+      <span class="toc-title">Fiesole &amp; Boboli<small>Nature &amp; jardins</small></span>
+      <span class="toc-date">Jeu 11</span>
+    </a>
+    <a class="toc-row" href="#jour6">
+      <span class="toc-num">VI.</span>
+      <span class="toc-title">Derniers moments<small>Marché &amp; départ</small></span>
+      <span class="toc-date">Ven 12</span>
+    </a>
+  </section>
+
+  <!-- ============ JOUR 1 ============ -->
+  <article id="jour1">
+    <div class="section-marker">Jour 1</div>
+    <div class="day-num">I.</div>
+    <h2>Arrivée &amp; <em>premiers pas</em></h2>
+    <div class="date-line">Dimanche 7 juin · Florence centre</div>
+
+    <p class="intro-para">Une journée d'acclimatation. Pas de musée, pas de file d'attente — seulement la ville, à pied, dans la lumière dorée de la fin de journée toscane.</p>
+
+    <div class="moment">
+      <div class="moment-time">12h10</div>
+      <div class="moment-title">L'aéroport, le tramway, la résidence</div>
+      <div class="moment-body">
+        Le tramway <em>T2 Vespucci</em> file droit depuis l'aéroport — descendre à l'arrêt <em>Porta al Prato</em> (avant SMN), 20 minutes, 1,70 €. Plus civilisé qu'un taxi, plus poétique aussi. Tickets à la borne ATAF ou via l'application <em>at bus</em>.<br><br>
+        Logement : <a href="https://maps.app.goo.gl/?q=Residence+Porta+al+Prato+Florence" target="_blank"><strong>Residence Porta al Prato</strong></a> — résidence à deux pas de l'arrêt T2 et du Parco delle Cascine, 7 min à pied de Firenze SMN, 15 min du Duomo. Check-in dès 15h00, check-out avant 11h00. 5 nuits (7 → 12 juin), 3 adultes.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">13h30</div>
+      <div class="moment-title">1ᵉʳ déjeuner toscan</div>
+      <div class="moment-body">
+        <a href="https://maps.app.goo.gl/?q=Trattoria+Mario+Florence" target="_blank">Trattoria Mario</a>, sur la Via Rosina — une institution familiale tenue depuis 1953, où les <em>ribollite</em> et les <em>pici</em> ont la même âme qu'à l'ouverture. Plus large en options sans porc : <a href="https://maps.app.goo.gl/?q=Trattoria+Za-Za+Florence" target="_blank">Trattoria Za-Za</a>, sur la Piazza del Mercato Centrale.
+      </div>
+    </div>
+
+    <div class="pullquote">« Florence ne se visite pas, elle se savoure — comme un gelato qu'on laisse fondre. »</div>
+
+    <div class="moment">
+      <div class="moment-time">15h00</div>
+      <div class="moment-title">Le Duomo, sans entrer encore</div>
+      <div class="moment-body">
+        1ʳᵉ approche, simplement à pied. Le <em>Duomo</em>, le <em>Battistero San Giovanni</em> et ses portes du paradis, la <em>Piazza della Signoria</em>, le <em>Palazzo Vecchio</em>, le <em>Ponte Vecchio</em>. Les visites attendront demain — aujourd'hui, on respire l'air de la ville.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">19h00</div>
+      <div class="moment-title">Le coucher du soleil au Piazzale</div>
+      <div class="moment-body">
+        Bus <em>12</em> ou <em>13</em> depuis la gare — plus confortable que les escaliers pour les parents. Au sommet, Florence s'allume comme une braise. Coucher du soleil à <em>20h50</em>. Une gelato à la main, on contemple sans rien dire.
+      </div>
+    </div>
+
+    <div class="dingbat">· · ·</div>
+
+    <div class="moment">
+      <div class="moment-time">21h00</div>
+      <div class="moment-title">Dîner à l'Oltrarno</div>
+      <div class="moment-body">
+        Traverser le Ponte Vecchio à la nuit tombée. <a href="https://maps.app.goo.gl/?q=Trattoria+4+Leoni+Florence" target="_blank">Trattoria 4 Leoni</a>, sur la Piazza della Passera. Demander les <em>pici al ragù</em>, sans vin, sans porc — <em>"senza maiale, senza alcool, per favore"</em>. La cuisine toscane sait s'adapter à tout, sans rien perdre de son âme.
+      </div>
+    </div>
+
+    <div class="day-footer">
+      <span>Budget jour</span>
+      <span class="accent">≈ 55 €/pers</span>
+      <span>10 km à pied</span>
+    </div>
+  </article>
+
+  <!-- ============ JOUR 2 ============ -->
+  <article id="jour2">
+    <div class="section-marker">Jour 2</div>
+    <div class="day-num">II.</div>
+    <h2>Le cœur <em>de Florence</em></h2>
+    <div class="date-line">Lundi 8 juin · Duomo · Uffizi · Mercato</div>
+
+    <p class="intro-para">La grande journée de Florence. On lève les yeux, on s'incline devant Botticelli, on déjeune au marché. Une journée chargée mais essentielle — la seule qui ne pardonne pas qu'on oublie de réserver.</p>
+
+    <div class="warning">
+      <strong>À réserver avant le départ.</strong>
+      Le pass Brunelleschi (Duomo) et la Galerie des Offices se réservent en ligne, sous peine de files d'attente énormes — <a href="https://duomo.firenze.it" target="_blank">duomo.firenze.it</a> et <a href="https://www.uffizi.it" target="_blank">uffizi.it</a>.
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">09h00</div>
+      <div class="moment-title">Cathédrale Santa Maria del Fiore</div>
+      <div class="moment-body">
+        Le pass Brunelleschi à <em>30 €</em> inclut cathédrale, baptistère, campanile et musée du Duomo. La coupole se gravit en <em>463 marches</em> — si les jambes manquent, préférer le <em>Campanile de Giotto</em>, 414 marches mais un escalier plus large, ou simplement la nef et le musée.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">12h30</div>
+      <div class="moment-title">Mercato Centrale, à l'étage</div>
+      <div class="moment-body">
+        Le food court le plus libre de Florence : une trentaine de stands, beaucoup d'options sans porc, chacun choisit son plat, on mange tous ensemble. Pizza, pasta, poisson, falafel, légumes grillés — la solution la plus simple et la plus joyeuse.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">14h30</div>
+      <div class="moment-title">Galerie des Offices</div>
+      <div class="moment-body">
+        Botticelli, Léonard, Raphaël, Caravage — <em>2h30</em> de Renaissance à l'état pur. Le café du 2ᵉ étage offre une terrasse avec vue sur le Palazzo Vecchio : la meilleure pause au monde pour reposer les jambes.
+      </div>
+    </div>
+
+    <div class="pullquote">« Devant la Naissance de Vénus, le silence n'est pas du recueillement. C'est juste qu'on a oublié de respirer. »</div>
+
+    <div class="moment">
+      <div class="moment-time">17h30</div>
+      <div class="moment-title">Une gelato, sans culpabilité</div>
+      <div class="moment-body">
+        <a href="https://maps.app.goo.gl/?q=Gelateria+Edoardo+Florence" target="_blank">Gelateria Edoardo</a>, près du Duomo (bio), ou <a href="https://maps.app.goo.gl/?q=Vivoli+Florence" target="_blank">Vivoli</a>, près de Santa Croce — la plus ancienne de Florence, ouverte en 1929.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">19h00</div>
+      <div class="moment-title">Santa Croce</div>
+      <div class="moment-body">
+        L'église franciscaine où reposent Michel-Ange, Galilée et Machiavel. <em>8 €</em>. Si les pieds protestent, la place en elle-même suffit — une des plus belles de la ville.
+      </div>
+    </div>
+
+    <div class="dingbat">· · ·</div>
+
+    <div class="moment">
+      <div class="moment-time">20h30</div>
+      <div class="moment-title">Dîner léger</div>
+      <div class="moment-body">
+        Après une telle journée, une <em>schiacciata</em> géante chez <a href="https://maps.app.goo.gl/?q=All%27Antico+Vinaio+Florence" target="_blank">All'Antico Vinaio</a> suffit — moins de 10 €, sans porc en demandant la version <em>tartufata vegetariana</em> ou poulet. À manger sur les marches d'une église, comme tout le monde.
+      </div>
+    </div>
+
+    <div class="day-footer">
+      <span>Budget jour</span>
+      <span class="accent">≈ 95 €/pers</span>
+      <span>8 km à pied</span>
+    </div>
+  </article>
+
+  <!-- ============ JOUR 3 ============ -->
+  <article id="jour3">
+    <div class="section-marker">Jour 3</div>
+    <div class="day-num">III.</div>
+    <h2>Pise &amp; <em>Lucca</em></h2>
+    <div class="date-line">Mardi 9 juin · La promesse à Maman</div>
+
+    <p class="intro-para">Une excursion en train vers l'ouest de la Toscane. Pise pour la tour, bien sûr, et Lucca pour la consolation — la plus belle ville fortifiée de la région, sans la foule de sa célèbre voisine.</p>
+
+    <div class="moment">
+      <div class="moment-time">08h30</div>
+      <div class="moment-title">Train Firenze SMN → Pisa Centrale</div>
+      <div class="moment-body">
+        Train régional Trenitalia, <em>55 minutes</em>, <em>9,30 €</em> aller. Pas de réservation nécessaire — ticket en gare ou via l'application Trenitalia. Ne pas oublier de <em>composter le billet papier</em> avant de monter, dans les machines vertes et blanches.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">10h00</div>
+      <div class="moment-title">Piazza dei Miracoli</div>
+      <div class="moment-body">
+        25 minutes à pied depuis la gare, ou le bus <em>LAM rosso</em>. La place est gratuite. Pour <em>monter dans la tour</em> — 294 marches, vertige possible — il faut <em>20 €</em> et une réservation sur <a href="https://www.opapisa.it" target="_blank">opapisa.it</a>. Sinon, la photo classique "je tiens la tour" depuis le gazon, et la visite intérieure du Duomo (gratuite avec un billet combo à 7 €).
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Pour Maman.</strong>
+      La place est plate et accessible. Si elle ne veut pas monter, la vue depuis le bas est déjà magnifique — et la photo est exactement la même.
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">12h30</div>
+      <div class="moment-title">Déjeuner à Pise — hors zone touriste</div>
+      <div class="moment-body">
+        Marcher 10 minutes vers le centre. <a href="https://maps.app.goo.gl/?q=Vineria+di+Piazza+Pisa" target="_blank">Vineria di Piazza</a> pour la cuisine toscane simple, ou la pizzeria <a href="https://maps.app.goo.gl/?q=Il+Montino+Pisa" target="_blank">Il Montino</a> pour goûter la <em>cecina</em> — galette de farine de pois chiches, sans porc, sans alcool, typiquement pisane.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">14h30</div>
+      <div class="moment-title">Train Pise → Lucca</div>
+      <div class="moment-body">
+        <em>30 minutes</em>, <em>3,90 €</em>. Trains très fréquents, toutes les demi-heures.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">15h00</div>
+      <div class="moment-title">Lucca, dans ses remparts</div>
+      <div class="moment-body">
+        Petite ville fortifiée magnifique, beaucoup plus tranquille que Pise. Faire <em>le tour des remparts</em> — 4 kilomètres à pied ou à vélo (4 €/h), c'est plat, ombragé, parents-friendly. Voir la <em>Piazza dell'Anfiteatro</em> en forme d'ovale (un ancien amphithéâtre romain), la <em>Torre Guinigi</em> avec ses chênes sur le toit (5 €), et la <em>Cattedrale di San Martino</em>.
+      </div>
+    </div>
+
+    <div class="pullquote">« Lucca, c'est Florence en murmures. »</div>
+
+    <div class="moment">
+      <div class="moment-time">18h30</div>
+      <div class="moment-title">Apéro toscan, sans alcool</div>
+      <div class="moment-body">
+        Café sur la Piazza dell'Anfiteatro. Un <em>spritz sans alcool</em> à l'ananas ou à l'orange, une focaccia, quelques olives. L'Italie authentique, sans la foule.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">20h00</div>
+      <div class="moment-title">Retour à Florence</div>
+      <div class="moment-body">
+        Train Lucca → SMN, <em>1h25</em>, <em>7,80 €</em>. Arrivée vers 21h30. Pizza à emporter ou trattoria de quartier près de l'hôtel — la journée fut longue.
+      </div>
+    </div>
+
+    <div class="day-footer">
+      <span>Budget jour</span>
+      <span class="accent">≈ 75 €/pers</span>
+      <span>3 trains</span>
+    </div>
+  </article>
+
+  <!-- ============ JOUR 4 ============ -->
+  <article id="jour4">
+    <div class="section-marker">Jour 4</div>
+    <div class="day-num">IV.</div>
+    <h2>Sienne &amp; <em>San Gimignano</em></h2>
+    <div class="date-line">Mercredi 10 juin · La Toscane des cartes postales</div>
+
+    <p class="intro-para">Les cyprès, les collines ocre, les villages perchés. La Toscane qu'on imagine en feuilletant les magazines — celle qu'il faut voir une fois dans sa vie.</p>
+
+    <div class="warning">
+      <strong>L'option la plus reposante.</strong>
+      Prendre un <em>tour organisé en bus</em> pour cette journée (~65 €/pers, journée entière, guide francophone possible). Les connexions de bus régionaux entre Sienne et San Gimignano sont rares — un tour épargne la logistique. À réserver sur GetYourGuide, Viator ou Civitatis.
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">08h30</div>
+      <div class="moment-title">Départ depuis Piazza Stazione</div>
+      <div class="moment-body">
+        Pick-up généralement devant SMN. Routes panoramiques à travers le <em>Chianti</em> — cyprès en bordure, vignes en lignes droites, fermes ocre. Photo stops inclus dans la plupart des tours.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">10h00</div>
+      <div class="moment-title">San Gimignano, "la Manhattan médiévale"</div>
+      <div class="moment-body">
+        14 tours s'élèvent au-dessus du village, vestiges de la rivalité entre familles nobles. Visite libre de 2 heures : la <em>Piazza della Cisterna</em>, la <em>Collégiale</em>, la <em>Torre Grossa</em> pour une vue à 360° (5 €), et surtout — <em>obligatoirement</em> — la <a href="https://maps.app.goo.gl/?q=Gelateria+Dondoli+San+Gimignano" target="_blank">Gelateria Dondoli</a>, élue plusieurs fois meilleure gelato du monde.
+      </div>
+    </div>
+
+    <div class="pullquote">« À San Gimignano, on ne photographie pas le village. On photographie le silence entre deux tours. »</div>
+
+    <div class="moment">
+      <div class="moment-time">12h30</div>
+      <div class="moment-title">Déjeuner toscan</div>
+      <div class="moment-body">
+        Souvent inclus dans le tour. Sinon, <a href="https://maps.app.goo.gl/?q=Locanda+Sant%27Agostino+San+Gimignano" target="_blank">Locanda Sant'Agostino</a> sur la jolie place du même nom — <em>pici cacio e pepe</em>, légumes de saison, lumière qui tombe à travers les pierres.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">14h30</div>
+      <div class="moment-title">Sienne, la rivale historique</div>
+      <div class="moment-body">
+        Visite libre de 3 heures. La <em>Piazza del Campo</em>, en forme de coquille, est le théâtre du fameux <em>Palio</em> (course de chevaux 2 fois par an). Le <em>Palazzo Pubblico</em> et la <em>Torre del Mangia</em> offrent une vue panoramique (10 €). Le <em>Duomo</em> en marbre noir et blanc est l'un des plus beaux d'Italie (7 €).
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">18h30</div>
+      <div class="moment-title">Une gelato sur la Piazza del Campo</div>
+      <div class="moment-body">
+        S'asseoir littéralement <em>par terre</em> sur la grande place inclinée, comme les Siennois eux-mêmes. C'est leur coutume, leur petit luxe quotidien. Le coucher de soleil sur les façades rouges est inoubliable.
+      </div>
+    </div>
+
+    <div class="dingbat">· · ·</div>
+
+    <div class="moment">
+      <div class="moment-time">19h30</div>
+      <div class="moment-title">Retour à Florence</div>
+      <div class="moment-body">
+        Arrivée vers 21h. Dîner léger : pizzas en forme de cœur de <a href="https://maps.app.goo.gl/?q=Gusta+Pizza+Florence" target="_blank">Gusta Pizza</a>, dans l'Oltrarno — sans porc faciles à demander.
+      </div>
+    </div>
+
+    <div class="day-footer">
+      <span>Budget jour</span>
+      <span class="accent">≈ 100 €/pers</span>
+      <span>2 villages</span>
+    </div>
+  </article>
+
+  <!-- ============ JOUR 5 ============ -->
+  <article id="jour5">
+    <div class="section-marker">Jour 5</div>
+    <div class="day-num">V.</div>
+    <h2>Fiesole &amp; <em>Boboli</em></h2>
+    <div class="date-line">Jeudi 11 juin · Nature &amp; jardins</div>
+
+    <p class="intro-para">Une journée pour respirer. Le matin sur les collines de Fiesole, là où Florence se laisse contempler de haut. L'après-midi à l'ombre des jardins de Boboli — bancs, fontaines, statues et vues, parce qu'au 5ᵉ jour de marche, c'est de la verdure dont on a besoin.</p>
+
+    <div class="moment">
+      <div class="moment-time">09h30</div>
+      <div class="moment-title">Bus 7 vers Fiesole</div>
+      <div class="moment-body">
+        30 minutes depuis SMN, <em>1,70 €</em>. Petit village perché au nord de Florence, plus calme que les hauteurs du Piazzale Michelangelo. Le théâtre romain (7 €), le monastère San Francesco, et surtout — depuis la <em>Piazza Mino</em> — un panorama exceptionnel sur Florence et la vallée de l'Arno.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">13h00</div>
+      <div class="moment-title">Déjeuner avec vue</div>
+      <div class="moment-body">
+        <a href="https://maps.app.goo.gl/?q=Vinandro+Fiesole" target="_blank">Vinandro</a>, sur la Piazza Mino. Petits prix, plats simples, terrasse ombragée. La vue, en revanche, est sans prix.
+      </div>
+    </div>
+
+    <div class="pullquote">« De Fiesole, Florence ressemble à ce qu'elle est vraiment : un songe d'architectes. »</div>
+
+    <div class="moment">
+      <div class="moment-time">15h00</div>
+      <div class="moment-title">Jardins de Boboli</div>
+      <div class="moment-body">
+        Bus 7 vers SMN, puis traversée du Ponte Santa Trinita jusqu'au Palazzo Pitti. <em>10 €</em> l'entrée (combinable avec les Jardins Bardini, gratuit pour les &lt;18 ans). Cyprès, allées en pente douce, l'<em>amphithéâtre</em>, la <em>Fontana del Nettuno</em>, et tout en haut le <em>Forte Belvedere</em> — vue à 360° sur Florence. Beaucoup de bancs ombragés pour les pauses : c'est un parc, pas un musée.
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Si les jambes des parents fatiguent.</strong>
+      Boboli est en pente — privilégier l'allée centrale (le <em>Viottolone</em> bordé de cyprès), s'asseoir près du <em>Bassin de l'Isolotto</em>, puis redescendre sans pousser jusqu'au Forte Belvedere. La beauté est partout, pas seulement au sommet.
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">18h30</div>
+      <div class="moment-title">Apéro au bord de l'Arno</div>
+      <div class="moment-body">
+        Promenade le long du <em>Lungarno</em>, lumière dorée sur les ponts. Café ou mocktails sur les terrasses près de <a href="https://maps.app.goo.gl/?q=Lungarno+Acciaiuoli+Florence" target="_blank">Lungarno Acciaiuoli</a> — vue directe sur le Ponte Vecchio à l'heure dorée.
+      </div>
+    </div>
+
+    <div class="dingbat">· · ·</div>
+
+    <div class="moment">
+      <div class="moment-time">20h30</div>
+      <div class="moment-title">Dîner d'adieu</div>
+      <div class="moment-body">
+        Pour la dernière vraie soirée : <a href="https://maps.app.goo.gl/?q=Il+Latini+Florence" target="_blank">Il Latini</a>, Via dei Palchetti — une institution, ambiance auberge toscane, plats généreux, longues tables partagées. Ou plus calme, <a href="https://maps.app.goo.gl/?q=Trattoria+Cammillo+Florence" target="_blank">Trattoria Cammillo</a>, Borgo San Jacopo. Réserver dans les deux cas.
+      </div>
+    </div>
+
+    <div class="day-footer">
+      <span>Budget jour</span>
+      <span class="accent">≈ 70 €/pers</span>
+      <span>Le repos mérité</span>
+    </div>
+  </article>
+
+  <!-- ============ JOUR 6 ============ -->
+  <article id="jour6">
+    <div class="section-marker">Jour 6</div>
+    <div class="day-num">VI.</div>
+    <h2>Derniers <em>moments</em></h2>
+    <div class="date-line">Vendredi 12 juin · Marché &amp; départ</div>
+
+    <p class="intro-para">Une matinée pour ramener Florence dans la valise — légère, sans bagages sur le dos. Le check-out à 10h, les valises confiées à la réception, et tout le reste se joue à pied autour du logement.</p>
+
+    <div class="moment">
+      <div class="moment-time">08h30</div>
+      <div class="moment-title">Petit déjeuner &amp; dernière valise</div>
+      <div class="moment-body">
+        Café et brioche dans le quartier, fermeture des sacs, vérification des passeports et des billets d'avion.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">10h00</div>
+      <div class="moment-title">Check-out &amp; bagages à la réception</div>
+      <div class="moment-body">
+        Check-out à 10h00 pile. <em>Demander à laisser les bagages à la réception</em> jusqu'au début d'après-midi — quasiment toutes les résidences l'acceptent gratuitement. Cela libère la matinée pour bouger légers, sans valises à traîner.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">10h30</div>
+      <div class="moment-title">Marché de San Lorenzo</div>
+      <div class="moment-body">
+        10 minutes à pied depuis le logement. Marché en plein air, juste à côté du Mercato Centrale : cuir, foulards, céramique, épices, papeterie florentine. Marchandage admis, surtout en fin de matinée. C'est ici qu'on ramène Florence dans la valise.
+      </div>
+    </div>
+
+    <div class="pullquote">« On ne quitte pas Florence — on s'en éloigne, en gardant un fil. »</div>
+
+    <div class="moment">
+      <div class="moment-time">12h30</div>
+      <div class="moment-title">Dernier déjeuner — Mercato Centrale</div>
+      <div class="moment-body">
+        Boucler la boucle au <a href="https://maps.app.goo.gl/?q=Mercato+Centrale+Florence" target="_blank">Mercato Centrale</a> (1ᵉʳ étage, où l'on avait déjeuné le J2) : rapide, flexible, sans réservation, sans porc partout, parfait avec le timing serré. Ou une <em>schiacciata</em> All'Antico Vinaio à emporter pour manger plus léger.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">14h00</div>
+      <div class="moment-title">Récupérer les bagages</div>
+      <div class="moment-body">
+        Retour au logement pour reprendre les valises (10 min à pied depuis San Lorenzo). Petite pause, remerciements à la réception.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">14h30</div>
+      <div class="moment-title">T2 → aéroport FLR</div>
+      <div class="moment-body">
+        Tramway T2 directement depuis l'arrêt <em>Porta al Prato</em>, à 2 minutes du logement — environ 20 minutes jusqu'à l'aéroport. Arrivée vers 15h00, soit 3h10 avant le vol — large pour l'enregistrement et les contrôles.
+      </div>
+    </div>
+
+    <div class="dingbat">· · ·</div>
+
+    <div class="moment">
+      <div class="moment-time">18h10</div>
+      <div class="moment-title">Vol AF1667 · FLR → CDG</div>
+      <div class="moment-body">
+        Arrivée à Paris à 20h. Et déjà, l'envie de revenir.
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- ============ PRATIQUE ============ -->
+<section id="pratique">
+  <div style="max-width: 660px; margin: 0 auto; padding: 0 28px;">
+    <div class="practical">
+      <h2>Carnet <em>pratique</em></h2>
+      <div class="practical-sub">Tout ce qu'il faut savoir</div>
+
+      <div class="practical-block">
+        <h3>Logement</h3>
+        <ul>
+          <li><span><a href="https://maps.app.goo.gl/?q=Residence+Porta+al+Prato+Florence" target="_blank">Residence Porta al Prato</a></span><em>7–12 juin</em></li>
+          <li><span>Position</span><em>Arrêt T2 à 2 min · SMN à 7 min · Cascine à 5 min</em></li>
+          <li><span>Nb. personnes</span><em>3 adultes</em></li>
+          <li><span>Check-in</span><em>Dimanche 7 juin · dès 15h00</em></li>
+          <li><span>Check-out</span><em>Vendredi 12 juin · avant 11h00</em></li>
+        </ul>
+      </div>
+
+      <div class="practical-block">
+        <h3>Transports</h3>
+        <ul>
+          <li><span>Aéroport ↔ Porta al Prato</span><em>Tram T2 · 1,70 € · 20 min</em></li>
+          <li><span>Bus urbain ATAF</span><em>1,70 € — 90 min</em></li>
+          <li><span>Train Trenitalia</span><em>App officielle · gare SMN à 7 min à pied</em></li>
+          <li><span>Billet papier</span><em>À composter avant de monter</em></li>
+        </ul>
+      </div>
+
+      <div class="practical-block">
+        <h3>Applications utiles</h3>
+        <ul>
+          <li><span>Trenitalia</span><em>Trains</em></li>
+          <li><span>at bus</span><em>Transports Florence</em></li>
+          <li><span>Google Maps</span><em>Télécharger Florence hors-ligne</em></li>
+          <li><span>Too Good To Go</span><em>Restos à −70 %</em></li>
+          <li><span>HappyCow</span><em>Restos végé / halal</em></li>
+        </ul>
+      </div>
+
+      <div class="practical-block">
+        <h3>Manger sans porc</h3>
+        <p>
+          La phrase magique : <em>"Senza maiale, senza alcool, per favore."</em><br>
+          Privilégier : pasta, pizza margherita ou marinara, poisson, légumes grillés, <em>pollo</em> (poulet). Éviter par défaut : <em>prosciutto, salame, pancetta, guanciale, mortadella</em>. Le Mercato Centrale offre le plus d'options sans porc — c'est notre refuge.
+        </p>
+      </div>
+
+      <div class="practical-block">
+        <h3>Argent &amp; pourboires</h3>
+        <ul>
+          <li><span>Carte bancaire</span><em>Acceptée partout · Apple Pay aussi</em></li>
+          <li><span>Cash</span><em>~50 € pour marché &amp; cafés</em></li>
+          <li><span>Pourboire</span><em>Pas obligatoire · arrondi ou 1-2 €</em></li>
+          <li><span>Coperto</span><em>2-3 €/pers ajouté au resto</em></li>
+        </ul>
+      </div>
+
+      <div class="practical-block">
+        <h3>Météo &amp; valise</h3>
+        <p>
+          Juin en Toscane oscille entre <em>18 et 28 °C</em>, ensoleillé presque garanti. Indispensables : chaussures de marche très confortables, crème solaire SPF 50, lunettes, casquette, une veste légère pour les soirées, petit sac à dos pour les excursions, et de quoi recharger les téléphones en permanence.
+        </p>
+      </div>
+
+      <div class="practical-block">
+        <h3>Réservations à faire en priorité</h3>
+        <ul>
+          <li><span>Pass Brunelleschi</span><em>duomo.firenze.it</em></li>
+          <li><span>Galerie des Offices</span><em>uffizi.it</em></li>
+          <li><span>Tour Sienne / San Gim.</span><em>GetYourGuide</em></li>
+          <li><span>Tour de Pise (optionnel)</span><em>opapisa.it</em></li>
+          <li><span>Restos du soir</span><em>TheFork ou téléphone</em></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUDGET ============ -->
+<main>
+  <section id="budget">
+    <div class="section-marker">Budget indicatif</div>
+    <p class="intro-para" style="text-align: center; margin-bottom: 30px;">Par personne, hors vols &amp; logement.</p>
+
+    <table class="budget-table">
+      <tr><td>Tramway aller-retour aéroport</td><td>3,40 €</td></tr>
+      <tr><td>Transports urbains (5 jours)</td><td>~15 €</td></tr>
+      <tr><td>Train Pise + Lucca + retour</td><td>~21 €</td></tr>
+      <tr><td>Tour Sienne + San Gimignano</td><td>~65 €</td></tr>
+      <tr><td>Pass Brunelleschi (Duomo)</td><td>30 €</td></tr>
+      <tr><td>Galerie des Offices</td><td>25 €</td></tr>
+      <tr><td>Jardins de Boboli (combo Bardini)</td><td>10 €</td></tr>
+      <tr><td>Entrées diverses</td><td>~30 €</td></tr>
+      <tr><td>Restos &amp; cafés (5 j × ~40 €)</td><td>~200 €</td></tr>
+      <tr><td>Souvenirs · gelato · extras</td><td>~50 €</td></tr>
+      <tr class="total"><td>Total par personne</td><td>≈ 450 €</td></tr>
+      <tr class="total"><td>Total famille (3 pers.)</td><td>≈ 1 350 €</td></tr>
+    </table>
+
+    <p style="font-size: 13px; color: var(--ink-muted); margin-top: 20px; text-align: center; font-style: italic;">
+      Marge de manœuvre : ±10-15 % selon les restos choisis.
+    </p>
+  </section>
+
+  <!-- ============ AVANT DÉPART ============ -->
+  <section id="avant">
+    <div class="section-marker">Avant le départ</div>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--accent); margin: 30px 0 12px;">2 semaines avant</h3>
+    <ul class="checklist">
+      <li>Réserver le pass Brunelleschi (Duomo)</li>
+      <li>Réserver la Galerie des Offices</li>
+      <li>Réserver le tour Sienne / San Gimignano</li>
+      <li>Réserver la montée de la Tour de Pise (si souhaité)</li>
+      <li>Vérifier la validité de la CNI ou du passeport des parents</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--accent); margin: 30px 0 12px;">1 semaine avant</h3>
+    <ul class="checklist">
+      <li>Télécharger Florence sur Google Maps hors-ligne</li>
+      <li>Installer les applications Trenitalia et <em>at bus</em></li>
+      <li>Prévoir la carte européenne d'assurance maladie</li>
+      <li>Prévenir la banque (utilisation de la CB à l'étranger)</li>
+      <li>Réserver 2-3 restaurants du soir</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--accent); margin: 30px 0 12px;">Dans la valise</h3>
+    <ul class="checklist">
+      <li>Chaussures de marche très confortables</li>
+      <li>Crème solaire SPF 50</li>
+      <li>Médicaments personnels + boîte premiers secours</li>
+      <li>Petit sac à dos pour les excursions</li>
+      <li>Adaptateur prise (non nécessaire France ↔ Italie)</li>
+      <li>Chargeurs &amp; batterie externe</li>
+    </ul>
+  </section>
+</main>
+
+<div class="book-footer">
+  Bon voyage.<br>
+  <div class="colophon">Carnet établi le 26 mai 2026 · Ahmed Atmane</div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ----- 1. Service worker (offline) -----
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    });
+  }
+
+  // ----- 2. Persistent checklist (localStorage) -----
+  const STORAGE_KEY = 'florence.checks.v1';
+  const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+  document.querySelectorAll('.checklist').forEach((list, listIdx) => {
+    // section key = preceding <h3> text if any, else list index
+    let sectionKey = 'list-' + listIdx;
+    let prev = list.previousElementSibling;
+    while (prev && prev.tagName !== 'H3') prev = prev.previousElementSibling;
+    if (prev) sectionKey = prev.textContent.trim().toLowerCase().replace(/\s+/g, '-').slice(0, 40);
+
+    list.querySelectorAll('li').forEach((li, idx) => {
+      const id = sectionKey + '::' + idx;
+      li.dataset.cbId = id;
+      if (state[id]) li.classList.add('checked');
+      li.addEventListener('click', () => {
+        li.classList.toggle('checked');
+        const next = { ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
+        if (li.classList.contains('checked')) next[id] = true;
+        else delete next[id];
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+      });
+    });
+  });
+
+  // ----- 3. Today highlight + scroll -----
+  // Trip dates: jour1 = 2026-06-07 ... jour6 = 2026-06-12
+  const TRIP_DAYS = {
+    'jour1': '2026-06-07',
+    'jour2': '2026-06-08',
+    'jour3': '2026-06-09',
+    'jour4': '2026-06-10',
+    'jour5': '2026-06-11',
+    'jour6': '2026-06-12'
+  };
+  const today = new Date();
+  const todayKey = today.getFullYear() + '-' +
+    String(today.getMonth() + 1).padStart(2, '0') + '-' +
+    String(today.getDate()).padStart(2, '0');
+
+  const todayId = Object.keys(TRIP_DAYS).find((k) => TRIP_DAYS[k] === todayKey);
+  if (todayId) {
+    const tocRow = document.querySelector('a.toc-row[href="#' + todayId + '"]');
+    const article = document.getElementById(todayId);
+    if (tocRow) tocRow.classList.add('today');
+    if (article) {
+      article.classList.add('today');
+      // Defer scroll until layout settles (esp. PWA standalone first paint)
+      setTimeout(() => {
+        article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 250);
+    }
+  }
+
+  // ----- 4. Rewrite Google Maps short links → Apple Plans -----
+  document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="maps.google"]').forEach((a) => {
+    try {
+      const u = new URL(a.href);
+      const q = u.searchParams.get('q');
+      if (q) {
+        a.href = 'https://maps.apple.com/?q=' + encodeURIComponent(q);
+      }
+    } catch (e) { /* ignore */ }
+  });
+})();
+</script>
+
+</body>
+</html>
