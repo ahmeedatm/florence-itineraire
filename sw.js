@@ -1,5 +1,5 @@
 // Florence PWA — service worker (cache-first, offline-ready)
-const CACHE = 'florence-v1';
+const CACHE = 'florence-v2';
 
 const ASSETS = [
   './',

@@ -539,6 +539,18 @@ article h2 em { font-style: italic; color: var(--accent); }
 }
 
 /* ============ INTERACTIVE ============ */
+/* Place links → Maps (subtle dotted underline, preserves surrounding style) */
+a.m, .moment-body a.m, .moment-title a.m {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-strong);
+  padding-bottom: 1px;
+  font-weight: inherit;
+  -webkit-tap-highlight-color: rgba(168, 81, 58, 0.18);
+}
+a.m em, .moment-body a.m em { color: inherit; font-weight: 500; font-style: italic; }
+a.m:active, .moment-body a.m:active, .moment-title a.m:active { border-bottom-color: var(--accent); }
+
 .checklist li { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; transition: opacity 0.15s; }
 .checklist li:hover::before, .checklist li:active::before { border-color: var(--accent); }
 .checklist li.checked { opacity: 0.45; text-decoration: line-through; text-decoration-color: var(--ink-muted); text-decoration-thickness: 1px; }
@@ -645,7 +657,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
     </a>
     <a class="toc-row" href="#jour2">
       <span class="toc-num">II.</span>
-      <span class="toc-title">Le cœur de Florence<small>Duomo · Uffizi · Mercato</small></span>
+      <span class="toc-title">Le cœur de Florence<small>SMN · Accademia · Uffizi</small></span>
       <span class="toc-date">Lun 8</span>
     </a>
     <a class="toc-row" href="#jour3">
@@ -700,15 +712,15 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">15h00</div>
-      <div class="moment-title">Le Duomo, sans entrer encore</div>
+      <div class="moment-title">Le <a class="m" href="https://maps.apple.com/?q=Duomo+di+Firenze">Duomo</a>, sans entrer encore</div>
       <div class="moment-body">
-        1ʳᵉ approche, simplement à pied. Le <em>Duomo</em>, le <em>Battistero San Giovanni</em> et ses portes du paradis, la <em>Piazza della Signoria</em>, le <em>Palazzo Vecchio</em>, le <em>Ponte Vecchio</em>. Les visites attendront demain — aujourd'hui, on respire l'air de la ville.
+        1ʳᵉ approche, simplement à pied. Le <em>Duomo</em>, le <a class="m" href="https://maps.apple.com/?q=Battistero+di+San+Giovanni+Firenze"><em>Battistero San Giovanni</em></a> et ses portes du paradis, la <a class="m" href="https://maps.apple.com/?q=Piazza+della+Signoria+Firenze"><em>Piazza della Signoria</em></a>, le <a class="m" href="https://maps.apple.com/?q=Palazzo+Vecchio+Firenze"><em>Palazzo Vecchio</em></a>, le <a class="m" href="https://maps.apple.com/?q=Ponte+Vecchio+Firenze"><em>Ponte Vecchio</em></a>. Les visites attendront demain — aujourd'hui, on respire l'air de la ville.
       </div>
     </div>
 
     <div class="moment">
       <div class="moment-time">19h00</div>
-      <div class="moment-title">Le coucher du soleil au Piazzale</div>
+      <div class="moment-title">Le coucher du soleil au <a class="m" href="https://maps.apple.com/?q=Piazzale+Michelangelo+Firenze">Piazzale</a></div>
       <div class="moment-body">
         Bus <em>12</em> ou <em>13</em> depuis la gare — plus confortable que les escaliers pour les parents. Au sommet, Florence s'allume comme une braise. Coucher du soleil à <em>20h50</em>. Une gelato à la main, on contemple sans rien dire.
       </div>
@@ -736,26 +748,42 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
     <div class="section-marker">Jour 2</div>
     <div class="day-num">II.</div>
     <h2>Le cœur <em>de Florence</em></h2>
-    <div class="date-line">Lundi 8 juin · Duomo · Uffizi · Mercato</div>
+    <div class="date-line">Lundi 8 juin · SMN · Accademia · Uffizi</div>
 
-    <p class="intro-para">La grande journée de Florence. On lève les yeux, on s'incline devant Botticelli, on déjeune au marché. Une journée chargée mais essentielle — la seule qui ne pardonne pas qu'on oublie de réserver.</p>
+    <p class="intro-para">La grande journée de Florence. On commence par la basilique du quartier, on file voir le David, on déjeune au marché, puis l'après-midi appartient à Botticelli aux Offices.</p>
 
     <div class="warning">
       <strong>À réserver avant le départ.</strong>
-      Le pass Brunelleschi (Duomo) et la Galerie des Offices se réservent en ligne, sous peine de files d'attente énormes — <a href="https://duomo.firenze.it" target="_blank">duomo.firenze.it</a> et <a href="https://www.uffizi.it" target="_blank">uffizi.it</a>.
+      La Galerie des Offices et la Galleria dell'Accademia se réservent en ligne, sous peine de files d'attente énormes — <a href="https://www.uffizi.it" target="_blank">uffizi.it</a> et <a href="https://www.galleriaaccademiafirenze.it" target="_blank">galleriaaccademiafirenze.it</a>.
     </div>
 
     <div class="moment">
       <div class="moment-time">09h00</div>
-      <div class="moment-title">Cathédrale Santa Maria del Fiore</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Basilica+di+Santa+Maria+Novella+Firenze">Basilica di Santa Maria Novella</a></div>
       <div class="moment-body">
-        Le pass Brunelleschi à <em>30 €</em> inclut cathédrale, baptistère, campanile et musée du Duomo. La coupole se gravit en <em>463 marches</em> — si les jambes manquent, préférer le <em>Campanile de Giotto</em>, 414 marches mais un escalier plus large, ou simplement la nef et le musée.
+        À <em>5 minutes à pied du logement</em> — façade en marbre vert et blanc d'Alberti, fresques de Ghirlandaio, et surtout la <a class="m" href="https://maps.apple.com/?q=Basilica+di+Santa+Maria+Novella+Firenze"><em>Trinité de Masaccio</em></a> (1427) : l'une des premières peintures de l'histoire à utiliser la perspective mathématique. <em>7,50 €</em>. Beaucoup plus calme que le Duomo le matin.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">10h30</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Officina+Profumo-Farmaceutica+di+Santa+Maria+Novella+Firenze">Officina Profumo-Farmaceutica</a></div>
+      <div class="moment-body">
+        Juste à côté de la basilique : la plus vieille pharmacie du monde encore en activité (fondée par les Dominicains en <em>1221</em>). Entrée libre. Les salons d'époque sont à voir comme un musée — boiseries, fresques, flacons anciens. Eau de rose, savons, parfums historiques en option pour les souvenirs.
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-time">11h15</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Galleria+dell%27Accademia+Firenze">Galleria dell'Accademia</a> — le David</div>
+      <div class="moment-body">
+        15 minutes à pied vers l'est, en passant par <a class="m" href="https://maps.apple.com/?q=Basilica+di+San+Lorenzo+Firenze"><em>San Lorenzo</em></a>. <em>16 €</em>, réservation conseillée. La galerie est petite (1h suffit) mais le <a class="m" href="https://maps.apple.com/?q=Galleria+dell%27Accademia+Firenze"><em>David</em></a> de Michel-Ange, dans son tribunal de lumière au bout du couloir, justifie à lui seul le détour. Voir aussi les <a class="m" href="https://maps.apple.com/?q=Galleria+dell%27Accademia+Firenze"><em>Prigioni</em></a>, statues inachevées qui semblent émerger du marbre.
       </div>
     </div>
 
     <div class="moment">
       <div class="moment-time">12h30</div>
-      <div class="moment-title">Mercato Centrale, à l'étage</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Mercato+Centrale+Firenze">Mercato Centrale</a>, à l'étage</div>
       <div class="moment-body">
         Le food court le plus libre de Florence : une trentaine de stands, beaucoup d'options sans porc, chacun choisit son plat, on mange tous ensemble. Pizza, pasta, poisson, falafel, légumes grillés — la solution la plus simple et la plus joyeuse.
       </div>
@@ -763,7 +791,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">14h30</div>
-      <div class="moment-title">Galerie des Offices</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Galleria+degli+Uffizi+Firenze">Galerie des Offices</a></div>
       <div class="moment-body">
         Botticelli, Léonard, Raphaël, Caravage — <em>2h30</em> de Renaissance à l'état pur. Le café du 2ᵉ étage offre une terrasse avec vue sur le Palazzo Vecchio : la meilleure pause au monde pour reposer les jambes.
       </div>
@@ -781,7 +809,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">19h00</div>
-      <div class="moment-title">Santa Croce</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Basilica+di+Santa+Croce+Firenze">Santa Croce</a></div>
       <div class="moment-body">
         L'église franciscaine où reposent Michel-Ange, Galilée et Machiavel. <em>8 €</em>. Si les pieds protestent, la place en elle-même suffit — une des plus belles de la ville.
       </div>
@@ -799,7 +827,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="day-footer">
       <span>Budget jour</span>
-      <span class="accent">≈ 95 €/pers</span>
+      <span class="accent">≈ 88 €/pers</span>
       <span>8 km à pied</span>
     </div>
   </article>
@@ -823,7 +851,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">10h00</div>
-      <div class="moment-title">Piazza dei Miracoli</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Piazza+dei+Miracoli+Pisa">Piazza dei Miracoli</a></div>
       <div class="moment-body">
         25 minutes à pied depuis la gare, ou le bus <em>LAM rosso</em>. La place est gratuite. Pour <em>monter dans la tour</em> — 294 marches, vertige possible — il faut <em>20 €</em> et une réservation sur <a href="https://www.opapisa.it" target="_blank">opapisa.it</a>. Sinon, la photo classique "je tiens la tour" depuis le gazon, et la visite intérieure du Duomo (gratuite avec un billet combo à 7 €).
       </div>
@@ -852,9 +880,9 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">15h00</div>
-      <div class="moment-title">Lucca, dans ses remparts</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Lucca+Italia">Lucca</a>, dans ses remparts</div>
       <div class="moment-body">
-        Petite ville fortifiée magnifique, beaucoup plus tranquille que Pise. Faire <em>le tour des remparts</em> — 4 kilomètres à pied ou à vélo (4 €/h), c'est plat, ombragé, parents-friendly. Voir la <em>Piazza dell'Anfiteatro</em> en forme d'ovale (un ancien amphithéâtre romain), la <em>Torre Guinigi</em> avec ses chênes sur le toit (5 €), et la <em>Cattedrale di San Martino</em>.
+        Petite ville fortifiée magnifique, beaucoup plus tranquille que Pise. Faire <em>le tour des remparts</em> — 4 kilomètres à pied ou à vélo (4 €/h), c'est plat, ombragé, parents-friendly. Voir la <a class="m" href="https://maps.apple.com/?q=Piazza+dell%27Anfiteatro+Lucca"><em>Piazza dell'Anfiteatro</em></a> en forme d'ovale (un ancien amphithéâtre romain), la <a class="m" href="https://maps.apple.com/?q=Torre+Guinigi+Lucca"><em>Torre Guinigi</em></a> avec ses chênes sur le toit (5 €), et la <a class="m" href="https://maps.apple.com/?q=Cattedrale+di+San+Martino+Lucca"><em>Cattedrale di San Martino</em></a>.
       </div>
     </div>
 
@@ -907,9 +935,9 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">10h00</div>
-      <div class="moment-title">San Gimignano, "la Manhattan médiévale"</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=San+Gimignano+Italia">San Gimignano</a>, "la Manhattan médiévale"</div>
       <div class="moment-body">
-        14 tours s'élèvent au-dessus du village, vestiges de la rivalité entre familles nobles. Visite libre de 2 heures : la <em>Piazza della Cisterna</em>, la <em>Collégiale</em>, la <em>Torre Grossa</em> pour une vue à 360° (5 €), et surtout — <em>obligatoirement</em> — la <a href="https://maps.app.goo.gl/?q=Gelateria+Dondoli+San+Gimignano" target="_blank">Gelateria Dondoli</a>, élue plusieurs fois meilleure gelato du monde.
+        14 tours s'élèvent au-dessus du village, vestiges de la rivalité entre familles nobles. Visite libre de 2 heures : la <a class="m" href="https://maps.apple.com/?q=Piazza+della+Cisterna+San+Gimignano"><em>Piazza della Cisterna</em></a>, la <em>Collégiale</em>, la <a class="m" href="https://maps.apple.com/?q=Torre+Grossa+San+Gimignano"><em>Torre Grossa</em></a> pour une vue à 360° (5 €), et surtout — <em>obligatoirement</em> — la <a href="https://maps.app.goo.gl/?q=Gelateria+Dondoli+San+Gimignano" target="_blank">Gelateria Dondoli</a>, élue plusieurs fois meilleure gelato du monde.
       </div>
     </div>
 
@@ -925,9 +953,9 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">14h30</div>
-      <div class="moment-title">Sienne, la rivale historique</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Siena+Italia">Sienne</a>, la rivale historique</div>
       <div class="moment-body">
-        Visite libre de 3 heures. La <em>Piazza del Campo</em>, en forme de coquille, est le théâtre du fameux <em>Palio</em> (course de chevaux 2 fois par an). Le <em>Palazzo Pubblico</em> et la <em>Torre del Mangia</em> offrent une vue panoramique (10 €). Le <em>Duomo</em> en marbre noir et blanc est l'un des plus beaux d'Italie (7 €).
+        Visite libre de 3 heures. La <a class="m" href="https://maps.apple.com/?q=Piazza+del+Campo+Siena"><em>Piazza del Campo</em></a>, en forme de coquille, est le théâtre du fameux <em>Palio</em> (course de chevaux 2 fois par an). Le <a class="m" href="https://maps.apple.com/?q=Palazzo+Pubblico+Siena"><em>Palazzo Pubblico</em></a> et la <a class="m" href="https://maps.apple.com/?q=Torre+del+Mangia+Siena"><em>Torre del Mangia</em></a> offrent une vue panoramique (10 €). Le <em>Duomo</em> en marbre noir et blanc est l'un des plus beaux d'Italie (7 €).
       </div>
     </div>
 
@@ -967,9 +995,9 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">09h30</div>
-      <div class="moment-title">Bus 7 vers Fiesole</div>
+      <div class="moment-title">Bus 7 vers <a class="m" href="https://maps.apple.com/?q=Fiesole+Italia">Fiesole</a></div>
       <div class="moment-body">
-        30 minutes depuis SMN, <em>1,70 €</em>. Petit village perché au nord de Florence, plus calme que les hauteurs du Piazzale Michelangelo. Le théâtre romain (7 €), le monastère San Francesco, et surtout — depuis la <em>Piazza Mino</em> — un panorama exceptionnel sur Florence et la vallée de l'Arno.
+        30 minutes depuis SMN, <em>1,70 €</em>. Petit village perché au nord de Florence, plus calme que les hauteurs du <a class="m" href="https://maps.apple.com/?q=Piazzale+Michelangelo+Firenze">Piazzale Michelangelo</a>. Le théâtre romain (7 €), le monastère San Francesco, et surtout — depuis la <a class="m" href="https://maps.apple.com/?q=Piazza+Mino+da+Fiesole"><em>Piazza Mino</em></a> — un panorama exceptionnel sur Florence et la vallée de l'Arno.
       </div>
     </div>
 
@@ -985,15 +1013,15 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">15h00</div>
-      <div class="moment-title">Jardins de Boboli</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Giardino+di+Boboli+Firenze">Jardins de Boboli</a></div>
       <div class="moment-body">
-        Bus 7 vers SMN, puis traversée du Ponte Santa Trinita jusqu'au Palazzo Pitti. <em>10 €</em> l'entrée (combinable avec les Jardins Bardini, gratuit pour les &lt;18 ans). Cyprès, allées en pente douce, l'<em>amphithéâtre</em>, la <em>Fontana del Nettuno</em>, et tout en haut le <em>Forte Belvedere</em> — vue à 360° sur Florence. Beaucoup de bancs ombragés pour les pauses : c'est un parc, pas un musée.
+        Bus 7 vers SMN, puis traversée du Ponte Santa Trinita jusqu'au Palazzo Pitti. <em>10 €</em> l'entrée (combinable avec les Jardins Bardini, gratuit pour les &lt;18 ans). Cyprès, allées en pente douce, l'<em>amphithéâtre</em>, la <a class="m" href="https://maps.apple.com/?q=Fontana+del+Nettuno+Giardino+di+Boboli+Firenze"><em>Fontana del Nettuno</em></a>, et tout en haut le <a class="m" href="https://maps.apple.com/?q=Forte+Belvedere+Firenze"><em>Forte Belvedere</em></a> — vue à 360° sur Florence. Beaucoup de bancs ombragés pour les pauses : c'est un parc, pas un musée.
       </div>
     </div>
 
     <div class="note">
       <strong>Si les jambes des parents fatiguent.</strong>
-      Boboli est en pente — privilégier l'allée centrale (le <em>Viottolone</em> bordé de cyprès), s'asseoir près du <em>Bassin de l'Isolotto</em>, puis redescendre sans pousser jusqu'au Forte Belvedere. La beauté est partout, pas seulement au sommet.
+      Boboli est en pente — privilégier l'allée centrale (le <a class="m" href="https://maps.apple.com/?q=Viottolone+Giardino+di+Boboli+Firenze"><em>Viottolone</em></a> bordé de cyprès), s'asseoir près du <a class="m" href="https://maps.apple.com/?q=Isolotto+Giardino+di+Boboli+Firenze"><em>Bassin de l'Isolotto</em></a>, puis redescendre sans pousser jusqu'au Forte Belvedere. La beauté est partout, pas seulement au sommet.
     </div>
 
     <div class="moment">
@@ -1048,7 +1076,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">10h30</div>
-      <div class="moment-title">Marché de San Lorenzo</div>
+      <div class="moment-title"><a class="m" href="https://maps.apple.com/?q=Mercato+di+San+Lorenzo+Firenze">Marché de San Lorenzo</a></div>
       <div class="moment-body">
         10 minutes à pied depuis le logement. Marché en plein air, juste à côté du Mercato Centrale : cuir, foulards, céramique, épices, papeterie florentine. Marchandage admis, surtout en fin de matinée. C'est ici qu'on ramène Florence dans la valise.
       </div>
@@ -1058,7 +1086,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <div class="moment">
       <div class="moment-time">12h30</div>
-      <div class="moment-title">Dernier déjeuner — Mercato Centrale</div>
+      <div class="moment-title">Dernier déjeuner — <a class="m" href="https://maps.apple.com/?q=Mercato+Centrale+Firenze">Mercato Centrale</a></div>
       <div class="moment-body">
         Boucler la boucle au <a href="https://maps.app.goo.gl/?q=Mercato+Centrale+Florence" target="_blank">Mercato Centrale</a> (1ᵉʳ étage, où l'on avait déjeuné le J2) : rapide, flexible, sans réservation, sans porc partout, parfait avec le timing serré. Ou une <em>schiacciata</em> All'Antico Vinaio à emporter pour manger plus léger.
       </div>
@@ -1160,7 +1188,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
       <div class="practical-block">
         <h3>Réservations à faire en priorité</h3>
         <ul>
-          <li><span>Pass Brunelleschi</span><em>duomo.firenze.it</em></li>
+          <li><span>Galleria dell'Accademia</span><em>galleriaaccademiafirenze.it</em></li>
           <li><span>Galerie des Offices</span><em>uffizi.it</em></li>
           <li><span>Tour Sienne / San Gim.</span><em>GetYourGuide</em></li>
           <li><span>Tour de Pise (optionnel)</span><em>opapisa.it</em></li>
@@ -1183,7 +1211,8 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
       <tr><td>Transports urbains (5 jours)</td><td>~15 €</td></tr>
       <tr><td>Train Pise + Lucca + retour</td><td>~21 €</td></tr>
       <tr><td>Tour Sienne + San Gimignano</td><td>~65 €</td></tr>
-      <tr><td>Pass Brunelleschi (Duomo)</td><td>30 €</td></tr>
+      <tr><td>Basilica Santa Maria Novella</td><td>7,50 €</td></tr>
+      <tr><td>Galleria dell'Accademia (David)</td><td>16 €</td></tr>
       <tr><td>Galerie des Offices</td><td>25 €</td></tr>
       <tr><td>Jardins de Boboli (combo Bardini)</td><td>10 €</td></tr>
       <tr><td>Entrées diverses</td><td>~30 €</td></tr>
@@ -1204,7 +1233,7 @@ nav { padding-top: calc(10px + env(safe-area-inset-top)); top: 0; }
 
     <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--accent); margin: 30px 0 12px;">2 semaines avant</h3>
     <ul class="checklist">
-      <li>Réserver le pass Brunelleschi (Duomo)</li>
+      <li>Réserver la Galleria dell'Accademia (David)</li>
       <li>Réserver la Galerie des Offices</li>
       <li>Réserver le tour Sienne / San Gimignano</li>
       <li>Réserver la montée de la Tour de Pise (si souhaité)</li>
